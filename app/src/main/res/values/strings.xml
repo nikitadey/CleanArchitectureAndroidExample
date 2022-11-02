@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Demo Application</string>
+    <string name="position">position</string>
+    <string name="text_stock">Stock</string>
+    <string name="text_crypto">Crypto</string>
+
+    <string name="MAPS_API_KEY">AIzaSyAwCn7v5tzuUe414BHEIo5q98dgmwUQIxM</string>
+    <string name="close">Close</string>
+</resources>

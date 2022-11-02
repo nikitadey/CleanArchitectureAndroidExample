@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#282828</color>
+    <color name="colorPrimaryDark">#020202</color>
+    <color name="colorAccent">#FFEB3B</color>
+    <color name="colorAccentLight">#FFEF65</color>
+    <color name="login_label_color">#939393</color>
+    <color name="start_trading_btn_color">#34E834</color>
+    <color name="start_demo_btn_color">#414141</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="already_have_account_color">#414344</color>
+    <color name="risk_warning_color">#3C3C3C</color>
+    <color name="bgBottomNavigation">#F9F9F9</color>
+    <color name="greyColor">#4B4B4B</color>
+    <color name="listViewGrey">#5F5D5E</color>
+    <color name="blue">#0060fb</color>
+    <color name="primaryTextColor">#181818</color>
+
+    <color name="secondaryTextColor">#FFFFFF</color>
+    <color name="bgColor">#020202</color>
+    <color name="bgColorContact">#F9F9F9</color>
+    <color name="labelColor">#959595</color>
+    <color name="activeColor">#34E834</color>
+    <color name="activeColorDark">#009600</color>
+    <color name="inActiveColor">#666666</color>
+    <color name="btnInActive">#5F5D5E</color>
+    <color name="signUpText">#E5E5E5</color>
+
+    <color name="blackColor">#000000</color>
+    <color name="chooseTradingLabelColor">#959595</color>
+    <color name="dropDownCurrency">#E5E5E5</color>
+    <color name="greyColor1">#959595</color>
+    <color name="black_color">#000000</color>
+    <color name="editTextBottomColor">#999999</color>
+    <color name="textLabelColor">#585858</color>
+    <color name="transparent">#00000000</color>
+    <color name="bgDialog">#282828</color>
+    <color name="declarationContent">#282828</color>
+    <color name="bgFooter">#282828</color>
+    <color name="divColor">#666666</color>
+    <color name="editTextHintColor">#666666</color>
+    <color name="red">#F61100</color>
+
+    <color name="questionnaireItem">#333333</color>
+    <color name="questionnaireItemLight">#E5333333</color>
+    <color name="questionnaireItemLighter">#C9333333</color>
+    <color name="bgWeb">#333333</color>
+    <color name="questionnaire_selected">#2E4314</color>
+    <color name="demo_button">#5F5D5E</color>
+    <color name="language_selection_color">#CCCCCC</color>
+    <color name="errorColor">#B8251A</color>
+</resources>

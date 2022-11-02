@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvExchangeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Exchange"
+                        android:layout_marginLeft="@dimen/screen_padding"
+                        android:layout_marginTop="@dimen/screen_padding"
+                        android:textColor="@color/greyColor1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:visibility="gone"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCryptoExchange"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_less"
+                        android:scrollbars="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvExchangeLabel">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/tvCryptoExchange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/greyColor"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_medium_large"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvCryptoExchange" />
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCrypto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_less"
+                        android:scrollbars="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvCryptoExchange">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clTopView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:padding="@dimen/margin_less"
+                        app:layout_constraintTop_toBottomOf="@id/tvCryptoName">
+
+                        <TextView
+                            android:id="@+id/tvTradeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Trade: "
+                            android:textColor="@color/greyColor"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+                        <TextView
+                            android:id="@+id/tvSymbol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/colorAccent"
+                            app:layout_constraintTop_toTopOf="@id/tvTradeLabel"
+                            app:layout_constraintStart_toEndOf="@id/tvTradeLabel"/>
+                        <TextView
+                            android:id="@+id/tvPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/colorAccent"
+                            app:layout_constraintTop_toTopOf="@id/tvSymbol"
+                            app:layout_constraintEnd_toEndOf="parent"
+
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tvCryptoName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/greyColor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvCrypto"
+                        android:textStyle="bold"/>
+
+                    <com.github.mikephil.charting.charts.CandleStickChart
+                        android:id="@+id/chart1"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:layout_marginBottom="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/clTopView" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/chart2"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:layout_marginTop="@dimen/margin_btn_vertical_fields"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="@dimen/screen_padding"
+                        android:layout_marginRight="@dimen/screen_padding"
+                        app:layout_constraintTop_toBottomOf="@id/chart1" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/bgColor"
+                app:menu="@menu/bottom_navigation_menu" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="@style/progressBarAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/llError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/text_normal"
+                android:text="Error Occurred.Please try again"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnTryAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/ButtonStyle"
+                android:layout_marginTop="@dimen/margin_less"
+                android:textColor="@color/whiteColor"
+                android:text="Try Again"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </FrameLayout>
+</layout>
